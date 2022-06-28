@@ -14,4 +14,7 @@ class ContactForm(forms.ModelForm):
             'zip_code',
             'phone_number',
             'email',
+            'birthday',
+            'notes'
         ]
+
