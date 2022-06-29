@@ -1,9 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>All Contacts</h1>
-
-<p><a href="{% url 'add_contact' %}">Add New Contact</a></p>
+<a href="{% url 'list_contacts' %}"><h1>Back to All Contacts</h1></a>
 
 <div class="flex flex-wrap">
 
@@ -43,10 +41,14 @@
     {% endif %}
     {% if contact.notes %}
     <div class="flex">
-      <div class="pr2"><i class="icofont-birthday-cake"></i></div>
+      <div class="pr2"><i class=""></i></div>
       <div>{{ contact.notes }}</div>
     </div>
     {% endif %}
+    <div class="flex">
+      <div class="pr2"><i class="icofont-birthday-cake"></i></div>
+      <div>{{ notes.text }}</div>
+    </div>
     <p>
       <a href="{% url 'edit_contact' pk=contact.pk %}">Edit Contact</a><br>    
       <a class="red" href="{% url 'delete_contact' pk=contact.pk %}">Delete Contact</a>

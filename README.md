@@ -58,9 +58,9 @@ For the first assignment, spend time familiarizing yourself with Django. Look at
 
 Then do the following steps:
 
-1. Add a birthday field to the `Contact` model. This field should be of type `DateField` and should be allowed to be null and empty.
+<!-- 1. Add a birthday field to the `Contact` model. This field should be of type `DateField` and should be allowed to be null and empty.
 2. Make sure you can edit the birthday by changing the `ContactForm`.
-3. Add the ability to display the birthday on the list of contacts. You will have to edit `templates/contacts/list_contacts.html`.
+3. Add the ability to display the birthday on the list of contacts. You will have to edit `templates/contacts/list_contacts.html`. -->
 
 When you get through that, add a birthday to one of your contacts to test out your code.
 
@@ -75,10 +75,10 @@ Answer the following questions:
 
 Then do the following steps:
 
-1. Add a new model, `Note`, to the `contacts` app. This model should contain text for the note and the date/time of the note. Look at the `auto_now_add` option for the `DateTimeField` to have the date/time automatically populated.
-2. Connect the `Note` model to the `Contact` model using a `ForeignKey`.
-3. Use the Django console to add a note to one of your contacts.
-4. Make a new view and template to see an individual contact. The URL for this view should be `contacts/<int:pk>/`. Show the notes for that contact on this individual view. Otherwise, this page can look like an individual contact on the contacts list page.
+<!-- 1. Add a new model, `Note`, to the `contacts` app. This model should contain text for the note and the date/time of the note. Look at the `auto_now_add` option for the `DateTimeField` to have the date/time automatically populated. -->
+<!-- 2. Connect the `Note` model to the `Contact` model using a `ForeignKey`. -->
+<!-- 3. Use the Django console to add a note to one of your contacts. -->
+<!-- 4. Make a new view and template to see an individual contact. The URL for this view should be `contacts/<int:pk>/`. Show the notes for that contact on this individual view. Otherwise, this page can look like an individual contact on the contacts list page. -->
 
 ## Task 3
 
@@ -86,7 +86,7 @@ With this assignment, we are going to explore forms.
 
 Previously, you added a `Note` model, but had no ability to create new notes through your Django application. Now do the following steps:
 
-1. Add a new form called `NoteForm`. This form should let you edit only one field, the text of the note.
+<!-- 1. Add a new form called `NoteForm`. This form should let you edit only one field, the text of the note. -->
 2. Add a new view to accept this form via `POST` request and add a new note to a specific contact. The contact will be specified via the URL, which should be `contacts/<int:pk>/notes/`.
 3. On the individual contact view that you previously added, add a form to create new notes. When the note is created, redirect back to the contact view.
 

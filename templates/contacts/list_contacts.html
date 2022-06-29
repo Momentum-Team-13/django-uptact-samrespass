@@ -8,7 +8,7 @@
 <div class="flex flex-wrap">
   {% for contact in contacts %}
   <div class="w-33 pa3">
-    <h2>{{ contact.name }}</h2>
+    <a href="{% url 'contact' pk=contact.pk %}"><h2>{{ contact.name }}</h2></a>
 
     <div class="flex">
       <div class="pr2"><i class="icofont-location-pin"></i></div>
