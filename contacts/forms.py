@@ -15,7 +15,6 @@ class ContactForm(forms.ModelForm):
             'phone_number',
             'email',
             'birthday',
-            'notes'
         ]
 
 class NoteForm(forms.ModelForm):

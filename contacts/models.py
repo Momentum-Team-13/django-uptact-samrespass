@@ -6,6 +6,10 @@ from localflavor.us.models import USStateField, USZipCodeField
 class Notes(models.Model):
     note = models.CharField(max_length=255, null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True, blank = True, null=True,)
+    contact = models.ForeignKey("Contact", on_delete=models.CASCADE,null=True, blank=True, related_name="contact_notes")
+
+    def __str__(self):
+        return(self.note)
     
 
 class Contact(models.Model):
@@ -25,6 +29,6 @@ class Contact(models.Model):
     state = USStateField(null=True, blank=True)
     zip_code = USZipCodeField(null=True, blank=True)
     birthday = models.DateField(null=True, blank=True)
-    notes = models.ForeignKey(Notes, on_delete=models.CASCADE,null=True, blank=True,)
+
 
 

@@ -39,19 +39,18 @@
       <div>{{ contact.birthday }}</div>
     </div>
     {% endif %}
-    {% if contact.notes %}
+
     <div class="flex">
       <div class="pr2"><i class=""></i></div>
-      <div>{{ contact.notes }}</div>
+      <div>{{ notes }}</div>
     </div>
-    {% endif %}
-    <div class="flex">
-      <div class="pr2"><i class="icofont-birthday-cake"></i></div>
-      <div>{{ notes.text }}</div>
-    </div>
+
+
     <p>
-      <a href="{% url 'edit_contact' pk=contact.pk %}">Edit Contact</a><br>    
+      <a href="{% url 'edit_contact' pk=contact.pk %}">Edit Contact</a><br>
+      <a href="{% url 'notes' pk=contact.pk %}">Add a Note</a><br>
       <a class="red" href="{% url 'delete_contact' pk=contact.pk %}">Delete Contact</a>
+      
     </p>
   </div>
 
